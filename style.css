@@ -1,0 +1,52 @@
+.heading{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 40px;
+    text-align: center;
+    text-shadow: 2px;
+    color: chocolate;
+    margin: 2px;
+
+}
+
+.location{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    text-align: center;
+    margin: 2px;
+}
+
+.contact{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    display: flex ;
+    justify-content: space-between;
+    list-style-type: none;
+    padding-left: 0px;
+    margin: 8px;
+    text-align: center;
+}
+
+.section_headings{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20pt;
+    margin: 30px;
+    color:darkcyan;
+}
+
+.line{
+    border-color: chocolate;
+}
+
+.paragraph{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    color: black;
+}
+
+.date{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    color: black;
+    text-align: right;
+    margin: auto;
+}
