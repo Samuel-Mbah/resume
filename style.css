@@ -12,18 +12,17 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: 12pt;
     text-align: center;
-    margin: 2px;
+    margin: 3px;
 }
 
 .contact{
     font-family: 'Times New Roman', Times, serif;
     font-size: 12pt;
     display: flex ;
-    justify-content: space-between;
+    justify-content: space-evenly;
     list-style-type: none;
     padding-left: 0px;
     margin: 8px;
-    text-align: center;
 }
 
 .section_headings{
@@ -41,12 +40,39 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: 12pt;
     color: black;
+    padding: top 2px;
+    text-align: justify;;
 }
 
 .date{
     font-family: 'Times New Roman', Times, serif;
     font-size: 12pt;
     color: black;
-    text-align: right;
-    margin: auto;
+    text-align: justify;
+    float: right;
+    font-weight: bold;
+}
+
+.icon_darkcyan
+{
+    color: darkcyan;
+}
+
+.icon_chocolate
+{
+    color: chocolate;
+}
+
+.right{
+    float: right;
+    font-weight: bold;
+}
+
+.bullet{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+    color: black;
+    text-align: justify;
+    float: left;
+    margin: 0px 20px 0px 20px;
 }
