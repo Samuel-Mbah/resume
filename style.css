@@ -40,8 +40,8 @@
     font-family: 'Times New Roman', Times, serif;
     font-size: 12pt;
     color: black;
-    padding: top 2px;
-    text-align: justify;;
+    padding-top: 2px;
+    text-align: justify;
 }
 
 .date{
@@ -75,4 +75,12 @@
     text-align: justify;
     float: left;
     margin: 0px 20px 0px 20px;
+}
+
+.subsection_heading{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 13pt;
+    font-weight: bold;
+    color: darkcyan;
+    margin-top: 8px;
 }
