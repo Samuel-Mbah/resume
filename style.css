@@ -1,86 +1,256 @@
-.heading{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 40px;
-    text-align: center;
-    text-shadow: 2px;
-    color: chocolate;
-    margin: 2px;
+/* ===================================================================
+   Samuel Winbono-Mpaaba Mba — Résumé Stylesheet
+   Design: Professional academic/industry resume
+   Fonts: Montserrat (headings) + Open Sans (body) via Google Fonts
+   =================================================================== */
 
+/* ── CSS Custom Properties ──────────────────────────────────────── */
+:root {
+    --primary:      #1a3a5c;   /* deep navy — headings, borders       */
+    --accent:       #1d6fa4;   /* medium blue — icons, dates, links    */
+    --accent-light: #e8f4fb;   /* very light blue — subtle highlights  */
+    --header-start: #1a3a5c;   /* header gradient start               */
+    --header-end:   #2563a8;   /* header gradient end                 */
+    --icon-header:  #f0c080;   /* warm gold for icons on dark header  */
+    --text-dark:    #1e293b;   /* near-black body text                */
+    --text-mid:     #475569;   /* slate for secondary text            */
+    --border:       #d1dde8;   /* soft blue-grey divider              */
+    --bg-page:      #eef2f7;   /* cool light-grey page background     */
+    --bg-card:      #ffffff;   /* white resume card                   */
+    --shadow:       0 4px 24px rgba(26, 58, 92, 0.12);
 }
 
-.location{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 12pt;
-    text-align: center;
-    margin: 3px;
+/* ── Reset & Base ───────────────────────────────────────────────── */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
-.contact{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 12pt;
-    display: flex ;
-    justify-content: space-evenly;
+body {
+    background-color: var(--bg-page);
+    font-family: 'Open Sans', 'Times New Roman', serif;
+    font-size: 11pt;
+    color: var(--text-dark);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── Resume Card ────────────────────────────────────────────────── */
+.resume-container {
+    max-width: 900px;
+    margin: 36px auto;
+    background: var(--bg-card);
+    box-shadow: var(--shadow);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+.resume-header {
+    background: linear-gradient(135deg, var(--header-start) 0%, var(--header-end) 100%);
+    padding: 36px 44px 28px;
+    text-align: center;
+    color: #fff;
+}
+
+.heading {
+    font-family: 'Montserrat', 'Trebuchet MS', Arial, sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.location {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 11pt;
+    color: rgba(255, 255, 255, 0.82);
+    margin-bottom: 18px;
+    letter-spacing: 0.3px;
+}
+
+.location .fas {
+    font-size: 10pt;
+    margin-right: 4px;
+}
+
+/* ── Contact bar ────────────────────────────────────────────────── */
+.contact {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10pt;
     list-style-type: none;
-    padding-left: 0px;
-    margin: 8px;
+    padding: 0;
+    margin: 0;
 }
 
-.section_headings{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 20pt;
-    margin: 30px;
-    color:darkcyan;
+.contact div {
+    color: rgba(255, 255, 255, 0.88);
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
-.line{
-    border-color: chocolate;
+.contact a {
+    color: rgba(255, 255, 255, 0.88);
+    text-decoration: none;
+    transition: color 0.15s;
 }
 
-.paragraph{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 12pt;
-    color: black;
-    padding-top: 2px;
-    text-align: justify;
+.contact a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
 
-.date{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 12pt;
-    color: black;
-    text-align: justify;
-    float: right;
-    font-weight: bold;
+/* icons inside the dark header */
+.resume-header .icon_chocolate {
+    color: var(--icon-header);
 }
 
-.icon_darkcyan
-{
-    color: darkcyan;
+/* ── Main Body Wrapper ───────────────────────────────────────────── */
+.resume-body {
+    padding: 8px 44px 32px;
 }
 
-.icon_chocolate
-{
-    color: chocolate;
-}
-
-.right{
-    float: right;
-    font-weight: bold;
-}
-
-.bullet{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 12pt;
-    color: black;
-    text-align: justify;
-    float: left;
-    margin: 0px 20px 0px 20px;
-}
-
-.subsection_heading{
-    font-family: 'Times New Roman', Times, serif;
+/* ── Section Headings ───────────────────────────────────────────── */
+.section_headings {
+    font-family: 'Montserrat', 'Trebuchet MS', Arial, sans-serif;
     font-size: 13pt;
-    font-weight: bold;
-    color: darkcyan;
-    margin-top: 8px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 1.4px;
+    margin: 28px 0 0 0;
+    padding-bottom: 0;
+    overflow: hidden; /* contain floated children */
+}
+
+.line {
+    border: none;
+    border-top: 2px solid var(--accent);
+    margin: 4px 0 10px 0;
+}
+
+/* ── Body Paragraphs ────────────────────────────────────────────── */
+.paragraph {
+    font-family: 'Open Sans', 'Times New Roman', serif;
+    font-size: 10.5pt;
+    color: var(--text-dark);
+    padding-top: 6px;
+    text-align: left;
+    line-height: 1.65;
+    overflow: hidden; /* contain floated .date / .right elements */
+}
+
+.paragraph b {
+    color: var(--text-dark);
+}
+
+/* ── Inline dates (floated right) ───────────────────────────────── */
+.date {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 10pt;
+    color: var(--accent);
+    float: right;
+    font-weight: 600;
+}
+
+.right {
+    float: right;
+    font-weight: 600;
+    color: var(--accent);
+    font-size: 10pt;
+}
+
+/* ── Bullet list container ──────────────────────────────────────── */
+.bullet {
+    font-family: 'Open Sans', 'Times New Roman', serif;
+    font-size: 10.5pt;
+    color: var(--text-dark);
+    text-align: left;
+    display: block;
+    margin: 2px 0 2px 18px;
+    line-height: 1.65;
+}
+
+/* ── Icon colours ───────────────────────────────────────────────── */
+.icon_chocolate {
+    color: var(--accent);
+}
+
+.icon_darkcyan {
+    color: var(--accent);
+}
+
+/* ── Sub-section headings (Research categories, etc.) ───────────── */
+.subsection_heading {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11pt;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: 10px;
+}
+
+/* ── References footer ──────────────────────────────────────────── */
+.references {
+    text-align: center;
+    font-style: italic;
+    font-size: 10pt;
+    color: var(--text-mid);
+    margin-top: 28px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+}
+
+/* ── Print styles ───────────────────────────────────────────────── */
+@media print {
+    body {
+        background: #fff;
+        font-size: 10pt;
+    }
+
+    .resume-container {
+        max-width: 100%;
+        margin: 0;
+        box-shadow: none;
+        border-radius: 0;
+    }
+
+    .resume-header {
+        background: #fff;
+        color: var(--primary);
+        padding: 16px 24px 12px;
+        border-bottom: 3px solid var(--primary);
+    }
+
+    .heading {
+        color: var(--primary);
+        font-size: 26px;
+    }
+
+    .location {
+        color: var(--text-mid);
+    }
+
+    .contact div,
+    .contact a {
+        color: var(--text-dark);
+    }
+
+    .resume-header .icon_chocolate {
+        color: var(--accent);
+    }
+
+    .resume-body {
+        padding: 6px 24px 20px;
+    }
+
+    .section_headings {
+        margin: 18px 0 0 0;
+    }
 }
